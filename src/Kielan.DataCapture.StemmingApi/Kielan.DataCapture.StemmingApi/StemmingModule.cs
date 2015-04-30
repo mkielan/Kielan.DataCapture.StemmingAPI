@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Kielan.DataCapture.StemmingApi.Extensions;
 using Kielan.DataCapture.StemmingApi.Helpers;
 using Kielan.DataCapture.StemmingApi.Models;
 using Nancy;

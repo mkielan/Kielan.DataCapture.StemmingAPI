@@ -84,6 +84,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bootstrapper.cs" />
+    <Compile Include="Extensions\RequestBodyExtensions.cs" />
     <Compile Include="Helpers\StemmingHelper.cs" />
     <Compile Include="IndexModule.cs" />
     <Compile Include="Models\StemmingModel.cs" />
