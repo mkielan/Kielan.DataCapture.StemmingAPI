@@ -11,7 +11,7 @@ namespace Kielan.DataCapture.StemmingApi
     {
         public StemmingModule()
         {
-            Post["/stemming"] = parameters =>
+            Post["/stemmingMany"] = parameters =>
             {
                 var model = this.Bind<StemmingModel>();
                 var list = new List<string>();
@@ -20,6 +20,13 @@ namespace Kielan.DataCapture.StemmingApi
                     model.Documents.ForEach(x => list.Add(StemmingHelper.StemmText(x)));
 
                 return Response.AsJson(list);
+            };
+
+            Post["/stemming"] = parameters =>
+            {
+                var model = this.Bind<SimpleStemmingModel>();
+                var result = StemmingHelper.StemmText(model.DocumentContent);
+                return Response.AsJson(result);
             };
         }
     }
