@@ -87,7 +87,6 @@
     <Compile Include="Extensions\RequestBodyExtensions.cs" />
     <Compile Include="Helpers\StemmingHelper.cs" />
     <Compile Include="IndexModule.cs" />
-    <Compile Include="Models\SimpleStemmingModel.cs" />
     <Compile Include="Models\StemmingModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StemmingModule.cs" />

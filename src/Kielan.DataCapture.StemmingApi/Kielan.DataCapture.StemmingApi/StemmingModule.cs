@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Diagnostics;
 using Kielan.DataCapture.StemmingApi.Extensions;
 using Kielan.DataCapture.StemmingApi.Helpers;
 using Kielan.DataCapture.StemmingApi.Models;
@@ -24,8 +25,8 @@ namespace Kielan.DataCapture.StemmingApi
 
             Post["/stemming"] = parameters =>
             {
-                var model = this.Bind<SimpleStemmingModel>();
-                var result = StemmingHelper.StemmText(model.DocumentContent);
+                var inText = Request.Body.ReadAsString();
+                var result = StemmingHelper.StemmText(inText);
                 return Response.AsJson(result);
             };
         }
